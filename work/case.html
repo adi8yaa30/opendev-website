@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" class="is-explorable">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Case Study — OpenDev | Web, App & AI Agency in India</title>
+    <meta
+      name="description"
+      content="Case study from OpenDev, a web, app & AI development agency in Guwahati, India."
+    />
+    <meta name="author" content="OpenDev" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#02060f" />
+    <link rel="canonical" href="https://opendev.agency/work" />
+
+    <link rel="icon" type="image/png" href="/favicon.png?v=2" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="OpenDev" />
+    <meta property="og:title" content="Work — OpenDev | Web, App & AI Agency in India" />
+    <meta
+      property="og:description"
+      content="Websites, 3D experiences & AI systems built from Guwahati for brands that want to be remembered."
+    />
+    <meta property="og:url" content="https://opendev.agency/work" />
+    <meta property="og:image" content="https://opendev.agency/assets/work/og-work.jpg" />
+    <meta property="og:image:alt" content="OpenDev — selected work" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Work — OpenDev | Web, App & AI Agency in India" />
+    <meta
+      name="twitter:description"
+      content="Websites, 3D experiences & AI systems built from Guwahati for brands that want to be remembered."
+    />
+    <meta name="twitter:image" content="https://opendev.agency/assets/work/og-work.jpg" />
+
+    <!-- Boot loader runs once per session; set the flag before first paint so there's no flash -->
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        try {
+          if (!sessionStorage.getItem("od-booted")) d.classList.add("show-boot");
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="/projects.json" as="fetch" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/work/work.css" />
+  </head>
+  <body class="is-explorable work-page" data-page="case">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Boot loader: same pip bar + % counter as the homepage, no ENTER gate -->
+    <div class="boot" id="boot" aria-hidden="true">
+      <div class="loader">
+        <div class="loader-percent"><span id="bootPercent">0</span>%</div>
+        <div class="loader-bar" id="bootBar"></div>
+        <div class="loader-label">DECRYPTING CASE FILE</div>
+      </div>
+    </div>
+
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label">VIEW</span></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+    <div class="page-transition" aria-hidden="true">
+      <span class="pt-bar pt-bar-1"></span>
+      <span class="pt-bar pt-bar-2"></span>
+      <span class="pt-bar pt-bar-3"></span>
+      <div class="pt-readout">
+        <span class="pt-readout-prefix">&gt; </span>
+        <span class="pt-readout-text" id="ptReadoutText">TRANSMITTING</span>
+        <span class="pt-readout-cursor">_</span>
+      </div>
+      <div class="pt-grid"></div>
+    </div>
+
+    <header class="topbar work-topbar">
+      <a href="/" class="brand fx-target" aria-label="OpenDev home">
+        <img src="/logo.png" alt="OpenDev" width="36" height="36" />
+      </a>
+      <button
+        class="nav-toggle fx-target"
+        id="navToggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="topNav"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="top-nav" id="topNav" aria-label="Main">
+        <a href="/" class="nav-link fx-target"><span class="nav-dot"></span>HOME</a>
+        <a href="/#about" class="nav-link fx-target"><span class="nav-dot"></span>ABOUT US</a>
+        <a href="/work" class="nav-link fx-target active"><span class="nav-dot"></span>WORK</a>
+        <a
+          href="https://www.instagram.com/opendev.co?igsh=MTFzNWdjcGdoYXk1bw=="
+          class="btn-clip btn-ghost nav-cta fx-target"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open OpenDev Instagram"
+        >
+          <span class="btn-icon">+</span> CONNECT NOW
+        </a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div id="case">
+        <section class="c-hero w-wrap">
+          <a class="c-back fx-target" href="/work">← ALL WORK</a>
+          <p class="terminal" style="margin-top:40px">
+            <span class="terminal-prefix">&gt; </span>DECRYPTING CASE FILE<span class="terminal-cursor">_</span>
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="w-footer">
+      <div class="w-footer-top w-wrap">
+        <a href="/" class="brand fx-target" aria-label="OpenDev home">
+          <img src="/logo.png" alt="OpenDev" width="36" height="36" loading="lazy" />
+        </a>
+        <nav class="w-footer-nav" aria-label="Footer">
+          <a href="/" class="nav-link fx-target"><span class="nav-dot"></span>HOME</a>
+          <a href="/#about" class="nav-link fx-target"><span class="nav-dot"></span>ABOUT US</a>
+          <a href="/work" class="nav-link fx-target active"><span class="nav-dot"></span>WORK</a>
+        </nav>
+        <a class="meta-email fx-target" href="mailto:contact@opendev.agency">contact@opendev.agency</a>
+      </div>
+      <div class="bottombar">
+        <div class="meta-tag">EST · 2025 / INDIA</div>
+        <a
+          href="https://wa.me/919101443253"
+          class="chat-btn fx-target"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with OpenDev on WhatsApp"
+        >
+          CHAT WITH US <span class="chat-dot">●</span>
+        </a>
+      </div>
+    </footer>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+    <script defer src="/work/work.js"></script>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary meta -->
+    <title>OpenDev — Web, App & AI Development Agency in India</title>
+    <meta
+      name="description"
+      content="OpenDev is a premium development agency in India building high-converting websites, mobile apps, SaaS products and AI automations for ambitious brands."
+    />
+    <meta
+      name="keywords"
+      content="web development agency, app development, AI automation, SaaS development, UI UX design, India web design studio, custom software development"
+    />
+    <meta name="author" content="OpenDev" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#02060f" />
+    <link rel="canonical" href="https://opendev.agency/" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="favicon.png?v=2" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="OpenDev" />
+    <meta property="og:title" content="OpenDev — Web, App & AI Development Agency in India" />
+    <meta
+      property="og:description"
+      content="Premium development studio building high-converting websites, apps, SaaS products and AI automations for ambitious brands."
+    />
+    <meta property="og:url" content="https://opendev.agency/" />
+    <meta property="og:image" content="https://opendev.agency/logo.png" />
+    <meta property="og:image:alt" content="OpenDev — development studio" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OpenDev — Web, App & AI Development Agency in India" />
+    <meta
+      name="twitter:description"
+      content="Premium development studio building high-converting websites, apps, SaaS products and AI automations for ambitious brands."
+    />
+    <meta name="twitter:image" content="https://opendev.agency/logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Structured data: organization / professional service -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "OpenDev",
+        "description": "Premium development agency building high-converting websites, mobile apps, SaaS products and AI automations for ambitious brands.",
+        "url": "https://opendev.agency/",
+        "logo": "https://opendev.agency/logo.png",
+        "image": "https://opendev.agency/logo.png",
+        "email": "contact@opendev.agency",
+        "foundingDate": "2025",
+        "areaServed": "Worldwide",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.instagram.com/opendev.co"
+        ],
+        "knowsAbout": [
+          "Web Development",
+          "App Development",
+          "SaaS Development",
+          "AI Automation",
+          "UI/UX Design"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Intro overlay: shown until user starts the experience (handles autoplay-with-sound policies) -->
+    <div class="intro-gate" id="introGate">
+      <div class="intro-inner">
+        <div class="loader">
+          <div class="loader-percent"><span id="loadingPercent">0</span>%</div>
+          <div class="loader-bar" id="loadingBar" aria-hidden="true"></div>
+          <div class="loader-label">LOADING CONTENT</div>
+        </div>
+        <button class="btn-clip btn-primary fx-target enter-btn" id="enterBtn" disabled>
+          <span class="btn-icon">▸</span> ENTER EXPERIENCE
+        </button>
+      </div>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+    <!-- Page transition overlay — sweeps when navigating between Home and About -->
+    <div class="page-transition" aria-hidden="true">
+      <span class="pt-bar pt-bar-1"></span>
+      <span class="pt-bar pt-bar-2"></span>
+      <span class="pt-bar pt-bar-3"></span>
+      <div class="pt-readout">
+        <span class="pt-readout-prefix">&gt; </span>
+        <span class="pt-readout-text" id="ptReadoutText">TRANSMITTING</span>
+        <span class="pt-readout-cursor">_</span>
+      </div>
+      <div class="pt-grid"></div>
+    </div>
+
+    <!-- Viewport frame: thin HUD outline with corner ticks & readouts (About section only) -->
+    <div class="viewport-frame" aria-hidden="true">
+      <span class="vf-tick vf-tl"></span>
+      <span class="vf-tick vf-tr"></span>
+      <span class="vf-tick vf-bl"></span>
+      <span class="vf-tick vf-br"></span>
+      <span class="vf-label vf-label-tl">OPENDEV // STUDIO</span>
+      <span class="vf-label vf-label-tr">SECTION · 01</span>
+      <span class="vf-label vf-label-bl">EST · 2025 / INDIA</span>
+      <a
+        class="vf-label vf-label-br vf-mail fx-target"
+        href="mailto:contact@opendev.agency"
+        aria-label="Email OpenDev"
+      >
+        <span class="vf-mail-arrow">&gt;</span>
+        contact@opendev.agency
+      </a>
+    </div>
+
+    <!-- Stage: video + landing share the same backdrop area -->
+    <div class="stage" id="stage">
+      <video
+        id="introVideo"
+        class="stage-video"
+        playsinline
+        preload="auto"
+        src="vid.mp4"
+      ></video>
+
+      <!-- Landing page overlay, revealed once video ends -->
+      <div class="landing" id="landing" aria-hidden="true">
+        <!-- Primary heading for SEO / screen readers (page is otherwise visual) -->
+        <h1 class="sr-only">
+          OpenDev — Web, App &amp; AI Development Agency in India
+        </h1>
+
+        <!-- Top bar -->
+        <header class="topbar">
+          <a href="#home" class="brand fx-target" data-section="home">
+            <img src="logo.png" alt="OpenDev" />
+          </a>
+          <button
+            class="nav-toggle fx-target"
+            id="navToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="topNav"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+          <nav class="top-nav" id="topNav">
+            <a href="#home" class="nav-link fx-target active" data-section="home">
+              <span class="nav-dot"></span>HOME
+            </a>
+            <a href="#about" class="nav-link fx-target" data-section="about">
+              <span class="nav-dot"></span>ABOUT US
+            </a>
+            <a href="/work" class="nav-link fx-target">
+              <span class="nav-dot"></span>WORK
+            </a>
+            <a
+              href="https://www.instagram.com/opendev.co?igsh=MTFzNWdjcGdoYXk1bw=="
+              class="btn-clip btn-ghost nav-cta fx-target"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open OpenDev Instagram"
+            >
+              <span class="btn-icon">+</span> CONNECT NOW
+            </a>
+          </nav>
+        </header>
+
+<!-- Bottom bar -->
+        <footer class="bottombar">
+          <div class="meta-tag">EST · 2025 / INDIA</div>
+          <a
+            href="https://wa.me/919101443253"
+            class="chat-btn fx-target"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat with OpenDev on WhatsApp"
+          >
+            CHAT WITH US <span class="chat-dot">●</span>
+          </a>
+        </footer>
+
+      </div>
+    </div>
+
+    <!-- Scroll-driven sections live below the fixed stage -->
+    <main class="scroll-host" id="scrollHost" aria-hidden="true">
+      <!-- Spacer = hero viewport (keeps stage in view while user scrolls in) -->
+      <section class="scroll-spacer" aria-hidden="true"></section>
+
+      <!-- ABOUT US -->
+      <section class="section section-about" id="about">
+        <div class="section-grid">
+          <aside class="section-meta">
+            <div class="section-index">01 / ABOUT</div>
+            <div class="section-kicker">
+              <span class="kicker-dot"></span> THE STUDIO
+            </div>
+
+            <div class="meta-contact">
+              <div class="meta-contact-label">DIRECT LINE</div>
+              <a
+                class="meta-email fx-target"
+                href="mailto:contact@opendev.agency"
+                aria-label="Email OpenDev"
+              >
+                contact@opendev.agency
+              </a>
+            </div>
+          </aside>
+
+          <div class="section-body">
+            <h2 class="section-title">
+              Beyond <span class="title-accent">Development</span>
+            </h2>
+
+            <p class="section-lead">
+              OpenDev is a future-focused digital studio crafting immersive
+              web experiences at the intersection of design, technology, and
+              motion.
+            </p>
+
+            <p class="section-copy">
+              We see the web as more than a platform — it's an evolving
+              digital environment. Our process merges strategy, creativity,
+              and engineering to transform ideas into intelligent experiences
+              built for the modern internet.
+            </p>
+
+            <ul class="pillars">
+              <li class="pillar">
+                <span class="pillar-num">01</span>
+                <span class="pillar-name">Design</span>
+                <span class="pillar-line">Futuristic interfaces, intuitive UX.</span>
+              </li>
+              <li class="pillar">
+                <span class="pillar-num">02</span>
+                <span class="pillar-name">Technology</span>
+                <span class="pillar-line">High-performance, scalable systems.</span>
+              </li>
+              <li class="pillar">
+                <span class="pillar-num">03</span>
+                <span class="pillar-name">Motion</span>
+                <span class="pillar-line">Fluid interactions that feel alive.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

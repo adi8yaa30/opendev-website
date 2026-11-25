@@ -1,0 +1,365 @@
+{
+  "filters": [
+    {
+      "id": "all",
+      "label": "ALL"
+    },
+    {
+      "id": "web",
+      "label": "WEB"
+    },
+    {
+      "id": "3d",
+      "label": "3D & MOTION"
+    },
+    {
+      "id": "saas",
+      "label": "SAAS & DASHBOARDS"
+    },
+    {
+      "id": "ai",
+      "label": "AI"
+    },
+    {
+      "id": "branding",
+      "label": "BRANDING"
+    }
+  ],
+  "tagToFilter": {
+    "WEB": "web",
+    "CMS": "web",
+    "3D": "3d",
+    "MOTION": "3d",
+    "SAAS & DASHBOARDS": "saas",
+    "AI": "ai",
+    "BRANDING": "branding"
+  },
+  "projects": [
+    {
+      "slug": "kazi-network",
+      "name": "Kazi Network",
+      "client": "Creative collective · Guwahati",
+      "year": "2026",
+      "role": "Brand positioning · Website",
+      "tags": [
+        "WEB",
+        "BRANDING"
+      ],
+      "status": "LIVE",
+      "featured": true,
+      "link": "https://kazinetwork.in/",
+      "outcome": "Sharper positioning and a bold site to say it out loud.",
+      "image": "/assets/work/kazi-network.webp",
+      "video": "/assets/work/kazi-network.mp4",
+      "alt": "Kazi Network homepage: full-bleed film still of a dancer in traditional Assamese dress",
+      "stack": [],
+      "gallery": [
+        {
+          "src": "/assets/work/kazi-network-01.webp",
+          "alt": "Kazi client logo strip and the What Kazi Does section, opening on web design"
+        },
+        {
+          "src": "/assets/work/kazi-network-02.webp",
+          "alt": "Kazi work grid of campaign films and photo shoots"
+        },
+        {
+          "src": "/assets/work/kazi-network-03.webp",
+          "alt": "Kazi bold statement headline, Fresh Juicy Content marquee and testimonials"
+        }
+      ],
+      "case": {
+        "brief": "Kazi Network is a Guwahati collective that makes films, brands and campaigns. The work was strong, but the story wasn't: they looked like one more production house. They needed a clear position and a site loud enough to carry it.",
+        "approach": "We started with positioning before pixels: what Kazi does, who it's for, and why Assam is an advantage rather than a footnote. The site then says it with confidence. Film stills run full-bleed, the type is set heavy, and one warm red does all the shouting. The work leads, and the copy stays short.",
+        "build": "A focused site that opens on full-screen film and moves straight into proof. A client logo strip comes first, then numbered service chapters, a campaign grid of films and shoots, a statement headline, a marquee and testimonials. Each section is built to load fast and hold up on a phone, because that's where most people meet the work.",
+        "outcome": "Kazi now introduces itself with a point of view and a portfolio that does the selling. The positioning and the site speak with one voice."
+      }
+    },
+    {
+      "slug": "shree-shyam-group",
+      "name": "Shree Shyam Group",
+      "client": "Solar street lighting & infrastructure",
+      "year": "2026",
+      "role": "Website · 3D experience",
+      "tags": [
+        "WEB",
+        "3D"
+      ],
+      "status": "LIVE",
+      "featured": false,
+      "link": "https://ssgofficial.com/",
+      "outcome": "A 3D solar showroom you walk into before you ever read a spec sheet.",
+      "image": "/assets/work/shree-shyam-group.webp",
+      "video": "/assets/work/shree-shyam-group.mp4",
+      "alt": "Shree Shyam Group website: a 3D solar showroom lit at dusk with an Enter SSG button",
+      "stack": [],
+      "gallery": [
+        {
+          "src": "/assets/work/shree-shyam-group-01.webp",
+          "alt": "SSG Our Mission section over aerial photos of a solar farm"
+        },
+        {
+          "src": "/assets/work/shree-shyam-group-02.webp",
+          "alt": "SSG Why SSG section with a rotating 3D solar panel"
+        },
+        {
+          "src": "/assets/work/shree-shyam-group-03.webp",
+          "alt": "SSG Powered by the Sun section and the row of partner logos"
+        }
+      ],
+      "case": {
+        "brief": "Shree Shyam Group supplies and installs solar street lights and high masts for communities, industries and government bodies. Infrastructure sites tend to look like spec sheets. SSG wanted to be remembered before anyone compared prices.",
+        "approach": "We turned the first visit into a place. Visitors arrive at a 3D solar showroom at dusk, lit by SSG's own street lights, and step inside with one click. From there the story follows the sun: mission, why SSG, the products, and the credentials buyers check for.",
+        "build": "An intro loader hands over to the 3D showroom scene, with Enter and Skip controls so nobody is forced through it. Past the intro, a scroll-driven 3D solar panel ties the sections together. The page closes with GeM, certifications and a row of partner logos, the proof public-sector buyers look for.",
+        "outcome": "SSG launched on its own domain with a site that feels like walking into the business, not reading about it, and still answers a procurement team's questions."
+      }
+    },
+    {
+      "slug": "peepal-consulting",
+      "name": "Peepal Consulting",
+      "client": "Executive search firm",
+      "year": "2026",
+      "role": "Website · Custom theme · CMS",
+      "tags": [
+        "WEB",
+        "CMS"
+      ],
+      "status": "LIVE",
+      "featured": false,
+      "link": "https://peepalconsulting.com/",
+      "outcome": "A neon-editorial site the team can run and publish to themselves.",
+      "image": "/assets/work/peepal-consulting.webp",
+      "video": "/assets/work/peepal-consulting.mp4",
+      "alt": "Peepal Consulting homepage: serif headline 'Build the human capability behind your next breakthrough' beside an enquiry form",
+      "stack": [
+        "WORDPRESS",
+        "CUSTOM THEME",
+        "CUSTOM CMS",
+        "INSIGHTS ENGINE"
+      ],
+      "gallery": [
+        {
+          "src": "/assets/work/peepal-consulting-01.webp",
+          "alt": "Peepal results band and the Our Services section with recruitment process outsourcing"
+        },
+        {
+          "src": "/assets/work/peepal-consulting-02.webp",
+          "alt": "Peepal Permanent Hiring section with a hand-drawn illustration on black"
+        },
+        {
+          "src": "/assets/work/peepal-consulting-03.webp",
+          "alt": "Peepal testimonials grid mixing client quotes and event photos"
+        }
+      ],
+      "case": {
+        "brief": "Executive search runs on trust and point of view. Peepal Consulting needed a site that looked sharper than a typical recruitment firm's, and one the team could keep publishing to without calling a developer every time.",
+        "approach": "We gave the brand a neon-editorial voice: magazine-style layouts, confident serif type and a single electric accent that flags what matters. Thought leadership moved from an afterthought to the centre of the site, so every visit shows the firm's point of view.",
+        "build": "No page builder. We wrote a custom WordPress theme from scratch, so every layout, animation and type style is ours to control. On top of it, custom code gives the Peepal team CMS control over the parts they change most: services, success stories, careers and insights. They edit content in plain fields while the design stays locked. A dedicated insights engine handles articles and categories, and puts the right reads in front of the right visitor.",
+        "outcome": "Peepal now has a site that reads like a publication and works like a pitch deck, and an in-house team that owns it day to day."
+      }
+    },
+    {
+      "slug": "elite-motors",
+      "name": "Elite Motors",
+      "client": "Elite Group · Pre-owned luxury cars",
+      "year": "2026",
+      "role": "Website · Social creatives · Shoots",
+      "tags": [
+        "WEB",
+        "BRANDING"
+      ],
+      "status": "LIVE",
+      "featured": false,
+      "link": "https://elitemotors.co.in/",
+      "outcome": "One studio behind the website, the social feed and the shoots.",
+      "image": "/assets/work/elite-motors.webp",
+      "video": "/assets/work/elite-motors.mp4",
+      "alt": "Elite Motors website: a white sports car headlight glowing on black beside the line 'We are the best when it comes to luxury pre-owned cars'",
+      "stack": [],
+      "gallery": [
+        {
+          "src": "/assets/work/elite-motors-01.webp",
+          "alt": "Elite Motors brand section with headlight imagery and quick links"
+        },
+        {
+          "src": "/assets/work/elite-motors-02.webp",
+          "alt": "Elite Motors Shop by Car Style and the brand portfolio grid"
+        },
+        {
+          "src": "/assets/work/elite-motors-03.webp",
+          "alt": "Elite Motors photo gallery of cars from the showroom shoots"
+        }
+      ],
+      "case": {
+        "brief": "Elite Motors sells premium pre-owned luxury cars in Guwahati. The cars carried the prestige, but the online presence didn't. They needed a showroom-grade website and a steady stream of content to match.",
+        "approach": "We work with Elite on a retainer, so the website, the social feed and the shoots share one look. Dark, cinematic and product-first: the cars are lit like a studio shoot, and everything else steps back.",
+        "build": "The site opens on a dark hero with a single car silhouette, then moves into listings with registration, mileage and availability, shop-by-style browsing, a brand portfolio and a gallery from our own shoots. A WhatsApp button stays one tap away, because that's where buyers in this market start the conversation.",
+        "outcome": "Elite now has one studio behind every touchpoint, and a website that looks as considered as the cars on its floor."
+      }
+    },
+    {
+      "slug": "homeshield",
+      "name": "Home Shield",
+      "client": "uPVC windows & doors · Guwahati",
+      "year": "2026",
+      "role": "Website",
+      "tags": [
+        "WEB"
+      ],
+      "status": "LIVE",
+      "featured": false,
+      "link": "https://homeshieldofficial.in/",
+      "outcome": "A product site that sells durability with numbers, not adjectives.",
+      "image": "/assets/work/homeshield.webp",
+      "video": "/assets/work/homeshield.mp4",
+      "alt": "Home Shield homepage: sliding uPVC doors onto a garden under the headline 'Windows and doors built for a harder world'",
+      "stack": [],
+      "gallery": [
+        {
+          "src": "/assets/work/homeshield-01.webp",
+          "alt": "Home Shield stat cards for thermal retention, corrosion and service life, above Our Product Series"
+        },
+        {
+          "src": "/assets/work/homeshield-02.webp",
+          "alt": "Home Shield film series profile colours and the Applications section"
+        },
+        {
+          "src": "/assets/work/homeshield-03.webp",
+          "alt": "Home Shield Compatible Systems selector showing arch and casement windows"
+        }
+      ],
+      "case": {
+        "brief": "Home Shield makes uPVC window and door profiles in Guwahati, built for sun, storms and salt air. Most competitors sell with adjectives. Home Shield wanted the product's real strengths to carry the site.",
+        "approach": "Lead with a lifestyle image, then let the numbers speak. Thermal retention, corrosion resistance and service life each get a bold card, followed by the product series and where each one fits. The palette is a confident blue with lots of white space, so it reads like an engineered product.",
+        "build": "A product site with a full-width hero and two clear actions: explore products or download the catalogue. Below it sit the stat cards, a product series showcase with film colour options, an applications gallery and a compatible-systems selector for arch, casement and other window types. Book a consultation stays pinned in the nav.",
+        "outcome": "Home Shield has a site that explains why its windows last, and turns that into consultation requests."
+      }
+    },
+    {
+      "slug": "koh-studio",
+      "name": "KŌH Studio",
+      "client": "Slow-fashion label · Assam",
+      "year": "2025",
+      "role": "Self-initiated · Motion site",
+      "tags": [
+        "WEB",
+        "MOTION"
+      ],
+      "status": "LIVE",
+      "featured": false,
+      "link": "https://adi8yaa30.github.io/KOH-STUDIO/",
+      "outcome": "A self-initiated GSAP site built to make slow fashion feel cinematic.",
+      "image": "/assets/work/koh-studio.webp",
+      "video": "/assets/work/koh-studio.mp4",
+      "alt": "KŌH Studio homepage: models in handmade pieces over an oversized KŌH Studio wordmark",
+      "stack": [
+        "GSAP"
+      ],
+      "gallery": [
+        {
+          "src": "/assets/work/koh-studio-01.webp",
+          "alt": "KŌH product story section pairing a close-up garment shot with short copy"
+        },
+        {
+          "src": "/assets/work/koh-studio-02.webp",
+          "alt": "KŌH Duwari piece in a framed editorial layout"
+        },
+        {
+          "src": "/assets/work/koh-studio-03.webp",
+          "alt": "KŌH Tirabon dress in a framed editorial layout"
+        }
+      ],
+      "case": {
+        "brief": "A self-initiated project. KŌH is a slow-fashion label from Assam, with pieces stitched slowly and named in Assamese. We wanted to see how cinematic a small fashion label's site could feel without losing the calm of the clothes.",
+        "approach": "Let the garments set the pace. The hero stacks campaign shots around an oversized wordmark, and each piece then gets its own framed moment with a single line of copy. The type stays quiet, there's plenty of white space, and the motion follows the scroll instead of performing.",
+        "build": "Built with GSAP. Scroll-driven reveals frame each piece, from Jolhori and Duwari to Loi and Tirabon, and image cards move at different speeds for depth. It runs as a lightweight static site.",
+        "outcome": "A live showcase of how we handle motion and editorial layout, and proof that slow fashion can feel cinematic online."
+      }
+    },
+    {
+      "slug": "canopy-northeast",
+      "name": "Canopy Northeast",
+      "client": "Car, bike & scooter rentals",
+      "year": "2026",
+      "role": "Landing page redesign",
+      "tags": [
+        "WEB"
+      ],
+      "status": "IN PROGRESS",
+      "featured": false,
+      "link": "https://adi8yaa30.github.io/canopy-northeast/",
+      "outcome": "An animated landing page redesign built to move bookings.",
+      "image": "/assets/work/canopy-northeast.webp",
+      "video": "/assets/work/canopy-northeast.mp4",
+      "alt": "Canopy Northeast landing page: an SUV over green Northeast hills with the headline 'Drive Beyond Ordinary'",
+      "stack": [],
+      "gallery": [
+        {
+          "src": "/assets/work/canopy-northeast-01.webp",
+          "alt": "Canopy Our Story in Numbers section with ribbon marquees"
+        },
+        {
+          "src": "/assets/work/canopy-northeast-02.webp",
+          "alt": "Canopy Why Canopy grid of green feature cards"
+        },
+        {
+          "src": "/assets/work/canopy-northeast-03.webp",
+          "alt": "Canopy illustrated road-trip step: Explore Northeast India"
+        }
+      ],
+      "case": {
+        "brief": "Canopy Northeast rents cars, bikes and scooters for travel across Northeast India. Their landing page needed to feel like the start of a trip, and make booking a vehicle the obvious next step.",
+        "approach": "Sell the destination and the vehicle together. The hero puts an SUV against the green hills of the Northeast, with the day rate and a Book Now button right there. Further down, numbers build trust, simple cards answer 'why Canopy?', and illustrated steps walk visitors from picking a ride to hitting the road.",
+        "build": "An animated landing page: a hero with a featured vehicle card, ribbon marquees, a story-in-numbers band, a grid of feature cards, and an illustrated road-trip sequence. The redesign is in progress, and the current build is live as a preview.",
+        "outcome": "In progress. The new page gives Canopy a booking-first journey and a look that matches the trips their customers come for."
+      }
+    },
+    {
+      "slug": "opendev-lead-agent",
+      "name": "OpenDev Lead Agent",
+      "client": "In-house · AI system",
+      "year": "2026",
+      "role": "AI agent · Automation",
+      "tags": [
+        "AI"
+      ],
+      "status": "",
+      "featured": false,
+      "link": "",
+      "outcome": "An AI agent that scores leads against our ICP and runs email and Instagram outreach.",
+      "image": "/assets/work/opendev-lead-agent.svg",
+      "alt": "Illustration of the OpenDev Lead Agent: incoming leads flow into an ICP scoring node, then out to email and Instagram outreach",
+      "stack": [],
+      "gallery": [],
+      "case": {
+        "brief": "Finding the right clients took us hours of manual research and copy-pasted messages. We wanted a system that finds and qualifies leads and starts the conversation, so our time goes to the leads that fit.",
+        "approach": "Score first, then reach out. Every lead is checked against our ideal client profile (ICP) before anything is sent, so outreach goes only to businesses we're a real fit for. Messages are personalised per lead and per channel, never one template blasted to everyone.",
+        "build": "An in-house AI agent with three stages. It takes in leads, scores each one against our ICP, and routes qualified leads to the right channel: a personalised email sequence or Instagram DM outreach.",
+        "outcome": "Prospecting runs in the background. We spend our time on conversations with businesses that match what we build best."
+      }
+    },
+    {
+      "slug": "thats-amore",
+      "hidden": true,
+      "name": "That's Amore",
+      "client": "Luxury floral studio",
+      "year": "2026",
+      "role": "Website · Owner dashboard",
+      "tags": [
+        "WEB",
+        "SAAS & DASHBOARDS"
+      ],
+      "status": "",
+      "featured": false,
+      "link": "",
+      "outcome": "A storefront plus an owner dashboard that runs orders over WhatsApp.",
+      "image": "/assets/work/thats-amore.webp",
+      "alt": "That's Amore floral studio website with its owner order dashboard",
+      "stack": [
+        "SUPABASE",
+        "WHATSAPP API"
+      ],
+      "gallery": [],
+      "case": null
+    }
+  ]
+}

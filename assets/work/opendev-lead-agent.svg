@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+  <title id="t">OpenDev Lead Agent</title>
+  <desc id="d">Incoming leads flow into an ICP scoring node, then out to email and Instagram outreach.</desc>
+  <defs>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#4ec3ff" fill-opacity="0.12"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#4ec3ff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#4ec3ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#01030a"/>
+      <stop offset="1" stop-color="#02060f"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <style>
+      .mono { font-family: "Share Tech Mono", ui-monospace, Menlo, monospace; text-transform: uppercase; }
+      .disp { font-family: "Chakra Petch", "Rajdhani", system-ui, sans-serif; font-weight: 600; }
+      .line { fill: none; stroke: #4ec3ff; stroke-opacity: 0.25; stroke-width: 1.5; }
+      .flow { fill: none; stroke: #4ec3ff; stroke-width: 2; stroke-dasharray: 6 18; animation: flow 1.6s linear infinite; }
+      .flow.slow { animation-duration: 2.4s; }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .blink { animation: blink 1s steps(2) infinite; }
+      .scan { animation: scan 4s ease-in-out infinite; }
+      .ring { animation: ring 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes flow { to { stroke-dashoffset: -48; } }
+      @keyframes pulse { 0%,100% { opacity: .45; transform: scale(1); } 50% { opacity: 1; transform: scale(1.25); } }
+      @keyframes blink { 50% { opacity: 0; } }
+      @keyframes scan { 0%,100% { transform: translateY(0); opacity: .0; } 10%,90% { opacity: .55; } 50% { transform: translateY(330px); } }
+      @keyframes ring { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(18deg); } }
+      @media (prefers-reduced-motion: reduce) {
+        .flow, .pulse, .blink, .scan, .ring { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <!-- Backdrop -->
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#dots)"/>
+  <circle cx="800" cy="520" r="420" fill="url(#glow)"/>
+
+  <!-- HUD frame -->
+  <g fill="none" stroke="#e9f3ff" stroke-opacity="0.35" stroke-width="1.5">
+    <path d="M40 80V40h40"/><path d="M1520 40h40v40"/><path d="M40 920v40h40"/><path d="M1520 960h40v-40"/>
+  </g>
+  <text x="64" y="84" class="mono" font-size="16" letter-spacing="6" fill="#8aa3c4">OPENDEV // LEAD AGENT</text>
+  <text x="1536" y="84" class="mono" font-size="16" letter-spacing="6" fill="#4ec3ff" text-anchor="end">AI SYSTEM · IN-HOUSE</text>
+
+  <!-- Left: incoming leads -->
+  <text x="140" y="250" class="mono" font-size="14" letter-spacing="5" fill="#4a5c7a">01 / INCOMING</text>
+  <g>
+    <g transform="translate(140 280)">
+      <path d="M10 0H340V62L328 74H0V10Z" fill="#080e1a" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.14"/>
+      <circle cx="40" cy="37" r="14" fill="none" stroke="#8aa3c4" stroke-opacity="0.6"/>
+      <rect x="70" y="24" width="150" height="8" fill="#e9f3ff" fill-opacity="0.75"/>
+      <rect x="70" y="42" width="96" height="6" fill="#8aa3c4" fill-opacity="0.45"/>
+      <rect x="276" y="28" width="40" height="18" fill="none" stroke="#4ec3ff" stroke-opacity="0.6"/>
+    </g>
+    <g transform="translate(140 374)">
+      <path d="M10 0H340V62L328 74H0V10Z" fill="#080e1a" fill-opacity="0.85" stroke="#4ec3ff" stroke-opacity="0.45"/>
+      <circle cx="40" cy="37" r="14" fill="none" stroke="#4ec3ff"/>
+      <rect x="70" y="24" width="180" height="8" fill="#e9f3ff"/>
+      <rect x="70" y="42" width="120" height="6" fill="#8aa3c4" fill-opacity="0.55"/>
+      <rect x="276" y="28" width="40" height="18" fill="#4ec3ff"/>
+    </g>
+    <g transform="translate(140 468)">
+      <path d="M10 0H340V62L328 74H0V10Z" fill="#080e1a" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.14"/>
+      <circle cx="40" cy="37" r="14" fill="none" stroke="#8aa3c4" stroke-opacity="0.6"/>
+      <rect x="70" y="24" width="130" height="8" fill="#e9f3ff" fill-opacity="0.75"/>
+      <rect x="70" y="42" width="80" height="6" fill="#8aa3c4" fill-opacity="0.45"/>
+      <rect x="276" y="28" width="40" height="18" fill="none" stroke="#4ec3ff" stroke-opacity="0.6"/>
+    </g>
+    <g transform="translate(140 562)">
+      <path d="M10 0H340V62L328 74H0V10Z" fill="#080e1a" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.14"/>
+      <circle cx="40" cy="37" r="14" fill="none" stroke="#8aa3c4" stroke-opacity="0.6"/>
+      <rect x="70" y="24" width="160" height="8" fill="#e9f3ff" fill-opacity="0.75"/>
+      <rect x="70" y="42" width="110" height="6" fill="#8aa3c4" fill-opacity="0.45"/>
+      <rect x="276" y="28" width="40" height="18" fill="none" stroke="#4ec3ff" stroke-opacity="0.6"/>
+    </g>
+    <g transform="translate(140 656)">
+      <path d="M10 0H340V62L328 74H0V10Z" fill="#080e1a" fill-opacity="0.6" stroke="#ffffff" stroke-opacity="0.08"/>
+      <circle cx="40" cy="37" r="14" fill="none" stroke="#4a5c7a"/>
+      <rect x="70" y="24" width="110" height="8" fill="#4a5c7a"/>
+      <rect x="70" y="42" width="70" height="6" fill="#4a5c7a" fill-opacity="0.6"/>
+    </g>
+    <!-- scanning line across the list -->
+    <rect class="scan" x="132" y="276" width="356" height="2" fill="#4ec3ff"/>
+  </g>
+
+  <!-- Paths: leads -> scorer -->
+  <path class="line" d="M480 411 C 560 411, 580 500, 680 500"/>
+  <path class="flow" d="M480 411 C 560 411, 580 500, 680 500"/>
+  <path class="line" d="M480 317 C 580 317, 590 480, 680 480"/>
+  <path class="line" d="M480 505 C 570 505, 600 520, 680 520"/>
+  <path class="line" d="M480 599 C 580 599, 590 540, 680 540"/>
+  <path class="flow slow" d="M480 599 C 580 599, 590 540, 680 540"/>
+
+  <!-- Center: ICP scoring node -->
+  <g transform="translate(800 510)">
+    <circle r="150" fill="none" stroke="#4ec3ff" stroke-opacity="0.12"/>
+    <g class="ring">
+      <circle r="124" fill="none" stroke="#4ec3ff" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="4 10"/>
+    </g>
+    <path d="M-104 -120H104L120 -104V104L104 120H-104L-120 104V-104Z" fill="#080e1a" stroke="#4ec3ff" stroke-opacity="0.6" stroke-width="1.5"/>
+    <!-- gauge -->
+    <circle r="72" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="10"/>
+    <circle r="72" fill="none" stroke="#4ec3ff" stroke-width="10" stroke-dasharray="393 453" transform="rotate(-90)" stroke-linecap="butt"/>
+    <circle r="72" fill="none" stroke="#4ec3ff" stroke-width="10" stroke-dasharray="393 453" transform="rotate(-90)" filter="url(#soft)" opacity="0.6"/>
+    <text y="16" class="disp" font-size="56" fill="#e9f3ff" text-anchor="middle">87</text>
+    <text y="-150" class="mono" font-size="14" letter-spacing="5" fill="#4a5c7a" text-anchor="middle">02 / ICP SCORE</text>
+    <text y="178" class="mono" font-size="15" letter-spacing="5" fill="#4ec3ff" text-anchor="middle">QUALIFIED</text>
+  </g>
+
+  <!-- Paths: scorer -> channels -->
+  <path class="line" d="M920 470 C 1020 470, 1040 380, 1130 380"/>
+  <path class="flow" d="M920 470 C 1020 470, 1040 380, 1130 380"/>
+  <path class="line" d="M920 550 C 1020 550, 1040 640, 1130 640"/>
+  <path class="flow slow" d="M920 550 C 1020 550, 1040 640, 1130 640"/>
+
+  <!-- Right: outreach channels -->
+  <text x="1130" y="250" class="mono" font-size="14" letter-spacing="5" fill="#4a5c7a">03 / OUTREACH</text>
+  <g transform="translate(1130 320)">
+    <path d="M12 0H340V108L328 120H0V12Z" fill="#080e1a" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.14"/>
+    <!-- envelope -->
+    <g transform="translate(36 38)" fill="none" stroke="#4ec3ff" stroke-width="2">
+      <rect width="52" height="38"/>
+      <path d="M0 0L26 22L52 0"/>
+    </g>
+    <text x="118" y="56" class="disp" font-size="28" letter-spacing="2" fill="#e9f3ff">EMAIL</text>
+    <text x="118" y="84" class="mono" font-size="13" letter-spacing="4" fill="#8aa3c4">PERSONALISED SEQUENCE</text>
+    <rect class="pulse" x="312" y="20" width="8" height="8" transform="rotate(45 316 24)" fill="#4ec3ff"/>
+  </g>
+  <g transform="translate(1130 580)">
+    <path d="M12 0H340V108L328 120H0V12Z" fill="#080e1a" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.14"/>
+    <!-- camera glyph -->
+    <g transform="translate(36 34)" fill="none" stroke="#4ec3ff" stroke-width="2">
+      <rect width="48" height="48" rx="12"/>
+      <circle cx="24" cy="24" r="11"/>
+      <circle cx="37" cy="11" r="2" fill="#4ec3ff" stroke="none"/>
+    </g>
+    <text x="118" y="56" class="disp" font-size="28" letter-spacing="2" fill="#e9f3ff">INSTAGRAM</text>
+    <text x="118" y="84" class="mono" font-size="13" letter-spacing="4" fill="#8aa3c4">DM OUTREACH</text>
+    <rect class="pulse" x="312" y="20" width="8" height="8" transform="rotate(45 316 24)" fill="#4ec3ff" style="animation-delay:.8s"/>
+  </g>
+
+  <!-- Terminal line -->
+  <text x="140" y="880" class="mono" font-size="20" letter-spacing="7" fill="#4ec3ff">
+    <tspan fill="#e9f3ff">&gt; </tspan>QUALIFYING LEADS<tspan class="blink">_</tspan>
+  </text>
+  <text x="1460" y="880" class="mono" font-size="14" letter-spacing="5" fill="#4a5c7a" text-anchor="end">SCORE · ROUTE · REACH OUT</text>
+</svg>
