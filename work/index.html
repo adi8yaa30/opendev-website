@@ -12,10 +12,10 @@
     <meta name="author" content="OpenDev" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#02060f" />
-    <link rel="canonical" href="https://opendev.agency/work" />
+    <link rel="canonical" href="https://opendev.agency/work/" />
 
-    <link rel="icon" type="image/png" href="/favicon.png?v=2" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
+    <link rel="icon" type="image/png" href="../favicon.png?v=2" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="OpenDev" />
@@ -24,7 +24,7 @@
       property="og:description"
       content="Websites, 3D experiences & AI systems built from Guwahati for brands that want to be remembered."
     />
-    <meta property="og:url" content="https://opendev.agency/work" />
+    <meta property="og:url" content="https://opendev.agency/work/" />
     <meta property="og:image" content="https://opendev.agency/assets/work/og-work.jpg" />
     <meta property="og:image:alt" content="OpenDev — selected work" />
     <meta property="og:locale" content="en_US" />
@@ -35,6 +35,11 @@
       content="Websites, 3D experiences & AI systems built from Guwahati for brands that want to be remembered."
     />
     <meta name="twitter:image" content="https://opendev.agency/assets/work/og-work.jpg" />
+
+    <!-- Relative paths need the trailing slash: /work → /work/ -->
+    <script>
+      if (/\/work$/.test(location.pathname)) location.replace(location.pathname + "/" + location.search + location.hash);
+    </script>
 
     <!-- Boot loader runs once per session; set the flag before first paint so there's no flash -->
     <script>
@@ -53,9 +58,9 @@
       href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" href="/projects.json" as="fetch" crossorigin />
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/work/work.css" />
+    <link rel="preload" href="../projects.json" as="fetch" crossorigin />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="work.css" />
   </head>
   <body class="is-explorable work-page" data-page="work">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -85,8 +90,8 @@
     </div>
 
     <header class="topbar work-topbar">
-      <a href="/" class="brand fx-target" aria-label="OpenDev home">
-        <img src="/logo.png" alt="OpenDev" width="36" height="36" />
+      <a href="../" class="brand fx-target" aria-label="OpenDev home">
+        <img src="../logo.png" alt="OpenDev" width="36" height="36" />
       </a>
       <button
         class="nav-toggle fx-target"
@@ -99,9 +104,9 @@
         <span class="nav-toggle-bar"></span>
       </button>
       <nav class="top-nav" id="topNav" aria-label="Main">
-        <a href="/" class="nav-link fx-target"><span class="nav-dot"></span>HOME</a>
-        <a href="/#about" class="nav-link fx-target"><span class="nav-dot"></span>ABOUT US</a>
-        <a href="/work" class="nav-link fx-target active" aria-current="page"><span class="nav-dot"></span>WORK</a>
+        <a href="../" class="nav-link fx-target"><span class="nav-dot"></span>HOME</a>
+        <a href="../#about" class="nav-link fx-target"><span class="nav-dot"></span>ABOUT US</a>
+        <a href="./" class="nav-link fx-target active" aria-current="page"><span class="nav-dot"></span>WORK</a>
         <a
           href="https://www.instagram.com/opendev.co?igsh=MTFzNWdjcGdoYXk1bw=="
           class="btn-clip btn-ghost nav-cta fx-target"
@@ -227,13 +232,13 @@
 
     <footer class="w-footer">
       <div class="w-footer-top w-wrap">
-        <a href="/" class="brand fx-target" aria-label="OpenDev home">
-          <img src="/logo.png" alt="OpenDev" width="36" height="36" loading="lazy" />
+        <a href="../" class="brand fx-target" aria-label="OpenDev home">
+          <img src="../logo.png" alt="OpenDev" width="36" height="36" loading="lazy" />
         </a>
         <nav class="w-footer-nav" aria-label="Footer">
-          <a href="/" class="nav-link fx-target"><span class="nav-dot"></span>HOME</a>
-          <a href="/#about" class="nav-link fx-target"><span class="nav-dot"></span>ABOUT US</a>
-          <a href="/work" class="nav-link fx-target active"><span class="nav-dot"></span>WORK</a>
+          <a href="../" class="nav-link fx-target"><span class="nav-dot"></span>HOME</a>
+          <a href="../#about" class="nav-link fx-target"><span class="nav-dot"></span>ABOUT US</a>
+          <a href="./" class="nav-link fx-target active"><span class="nav-dot"></span>WORK</a>
         </nav>
         <a class="meta-email fx-target" href="mailto:contact@opendev.agency">contact@opendev.agency</a>
       </div>
@@ -254,6 +259,6 @@
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
-    <script defer src="/work/work.js"></script>
+    <script defer src="work.js"></script>
   </body>
 </html>

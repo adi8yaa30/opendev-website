@@ -6,7 +6,16 @@
 
 (() => {
   const SITE = "https://opendev.agency";
-  const DATA_URL = "/projects.json";
+  // Resolve everything from where this script lives, so the site works at a domain root
+  // (opendev.agency) or in a subfolder (GitHub Pages: /opendev-website/)
+  const SCRIPT_URL = (document.currentScript && document.currentScript.src) || location.href;
+  const WORK_URL = new URL("./", SCRIPT_URL).href; // .../work/
+  const ROOT_URL = new URL("../", SCRIPT_URL).href; // site root
+  const DATA_URL = new URL("projects.json", ROOT_URL).href;
+  const asset = (path = "") => (/^https?:/.test(path) ? path : new URL(path.replace(/^\//, ""), ROOT_URL).href);
+  // Pretty /work/<slug> URLs need a server rewrite (Netlify, local serve.js). Elsewhere use the template + ?p=
+  const PRETTY = /(^|\.)opendev\.agency$|\.netlify\.app$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
+  const caseHref = (slug) => (PRETTY ? WORK_URL + encodeURIComponent(slug) : WORK_URL + "case.html?p=" + encodeURIComponent(slug));
   const page = document.body.dataset.page; // "work" | "case"
 
   const gsap = window.gsap;
@@ -172,7 +181,7 @@
      ============================================================ */
 
   const initBackButton = () => {
-    const parent = page === "case" ? "/work" : "/";
+    const parent = page === "case" ? WORK_URL : ROOT_URL;
     const btn = document.createElement("a");
     btn.className = "btn-clip btn-ghost back-btn fx-target";
     btn.href = parent;
@@ -421,7 +430,7 @@
   };
 
   const mediaHTML = (p, { eager = false, big = false } = {}) => `
-    <img src="${esc(p.image)}" alt="${esc(p.alt)}" width="1600" height="1000"
+    <img src="${esc(asset(p.image))}" alt="${esc(p.alt)}" width="1600" height="1000"
       ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"
       sizes="${big ? "100vw" : "(max-width: 760px) 100vw, 60vw"}" />`;
 
@@ -503,10 +512,10 @@
 
   const cardHTML = (p, index, data) => `
     <li class="card reveal" data-card data-filters="${filtersFor(p, data).join(" ")}">
-      <a class="card-link fx-target" href="/work/${esc(p.slug)}" data-cursor="view" data-readout="OPENING CASE FILE">
+      <a class="card-link fx-target" href="${esc(caseHref(p.slug))}" data-cursor="view" data-readout="OPENING CASE FILE">
         <div class="media" data-placeholder="${esc(placeholderLabel(p.image))}">
           ${mediaHTML(p)}
-          ${p.video ? `<video muted loop playsinline preload="none" data-src="${esc(p.video)}" aria-hidden="true"></video>` : ""}
+          ${p.video ? `<video muted loop playsinline preload="none" data-src="${esc(asset(p.video))}" aria-hidden="true"></video>` : ""}
           ${p.status ? `<span class="card-status">${statusHTML(p.status)}</span>` : ""}
           <span class="card-cta" aria-hidden="true">VIEW CASE <span>→</span></span>
         </div>
@@ -523,11 +532,11 @@
 
   const featuredHTML = (p, index, data) => `
     <div class="reveal" data-card data-filters="${filtersFor(p, data).join(" ")}">
-      <a class="w-featured fx-target" href="/work/${esc(p.slug)}" data-cursor="view" data-readout="OPENING CASE FILE">
+      <a class="w-featured fx-target" href="${esc(caseHref(p.slug))}" data-cursor="view" data-readout="OPENING CASE FILE">
         <div class="media" data-placeholder="${esc(placeholderLabel(p.image + (p.video ? " / " + p.video : "")))}">
           <div class="media-inner">
             ${mediaHTML(p, { eager: true, big: true })}
-            ${p.video ? `<video muted loop playsinline preload="none" data-src="${esc(p.video)}" aria-hidden="true"></video>` : ""}
+            ${p.video ? `<video muted loop playsinline preload="none" data-src="${esc(asset(p.video))}" aria-hidden="true"></video>` : ""}
           </div>
           <div class="w-featured-kicker">
             <span class="status status-live">FEATURED CASE</span>
@@ -689,7 +698,7 @@
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       name: "Work — OpenDev",
-      url: SITE + "/work",
+      url: SITE + "/work/",
       isPartOf: { "@type": "WebSite", name: "OpenDev", url: SITE + "/" },
       hasPart: projects.map(creativeWork),
     });
@@ -749,7 +758,7 @@
       document.title = "Case file not found | OpenDev";
       host.innerHTML = `
         <section class="c-hero w-wrap">
-          <a class="c-back fx-target" href="/work">← ALL WORK</a>
+          <a class="c-back fx-target" href="${esc(WORK_URL)}">← ALL WORK</a>
           <div class="c-hero-top"><div class="section-index">404 / NOT FOUND</div></div>
           <h1 class="c-title">Signal <span class="title-accent">lost</span></h1>
           <p class="terminal" style="margin-top:24px"><span class="terminal-prefix">&gt; </span>NO CASE FILE AT THIS ADDRESS<span class="terminal-cursor">_</span></p>
@@ -767,7 +776,7 @@
 
     const hero = `
       <section class="c-hero w-wrap">
-        <a class="c-back fx-target" href="/work">← ALL WORK</a>
+        <a class="c-back fx-target" href="${esc(WORK_URL)}">← ALL WORK</a>
         <div class="c-hero-top">
           <div class="section-index" data-type>CASE ${pad(i + 1)} / ${esc(p.name.toUpperCase())}</div>
           ${statusHTML(p.status)}
@@ -788,7 +797,7 @@
       <div class="c-cover w-wrap">
         <div class="media" data-placeholder="${esc(placeholderLabel(p.image))}">
           ${mediaHTML(p, { eager: true, big: true })}
-          ${p.video ? `<video muted loop playsinline preload="none" data-src="${esc(p.video)}" aria-hidden="true"></video>` : ""}
+          ${p.video ? `<video muted loop playsinline preload="none" data-src="${esc(asset(p.video))}" aria-hidden="true"></video>` : ""}
         </div>
       </div>`;
 
@@ -797,7 +806,7 @@
           (g) => `
           <figure class="reveal">
             <div class="media" data-placeholder="${esc(placeholderLabel(g.src))}">
-              <img src="${esc(g.src)}" alt="${esc(g.alt)}" width="1600" height="1000" loading="lazy" decoding="async" />
+              <img src="${esc(asset(g.src))}" alt="${esc(g.alt)}" width="1600" height="1000" loading="lazy" decoding="async" />
             </div>
             <figcaption>${esc(g.alt)}</figcaption>
           </figure>`
@@ -843,7 +852,7 @@
     }
 
     const nextLink = `
-      <a class="c-next w-wrap fx-target" href="/work/${esc(next.slug)}" data-cursor="view" data-readout="NEXT TRANSMISSION">
+      <a class="c-next w-wrap fx-target" href="${esc(caseHref(next.slug))}" data-cursor="view" data-readout="NEXT TRANSMISSION">
         <span class="c-next-label">NEXT PROJECT / ${pad(i + 2 > projects.length ? 1 : i + 2)}</span>
         <span class="c-next-name">${esc(next.name)} <span class="c-next-arrow" aria-hidden="true">→</span></span>
       </a>`;
