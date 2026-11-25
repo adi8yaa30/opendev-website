@@ -167,6 +167,43 @@
   };
 
   /* ============================================================
+     Floating back button — returns to the previous page on this
+     site, or to the parent page when opened from outside
+     ============================================================ */
+
+  const initBackButton = () => {
+    const parent = page === "case" ? "/work" : "/";
+    const btn = document.createElement("a");
+    btn.className = "btn-clip btn-ghost back-btn fx-target";
+    btn.href = parent;
+    btn.dataset.readout = page === "case" ? "RETURNING TO ARCHIVE" : "RETURNING TO HOMEBASE";
+    btn.setAttribute("aria-label", page === "case" ? "Back to previous page" : "Back to home");
+    btn.innerHTML = '<span class="btn-icon">←</span> BACK';
+    document.body.appendChild(btn);
+
+    let cameFromSite = false;
+    try {
+      cameFromSite = !!document.referrer && new URL(document.referrer).origin === location.origin;
+    } catch (_) {}
+
+    btn.addEventListener("click", (e) => {
+      if (!cameFromSite || history.length < 2) return; // plain link to the parent page
+      e.preventDefault();
+      const go = () => history.back();
+      if (reduceMotion) return go();
+      const readout = $("#ptReadoutText");
+      if (readout) readout.textContent = btn.dataset.readout;
+      document.body.classList.add("is-navigating");
+      setTimeout(go, 420);
+    });
+
+    // Show once the top-of-page navigation has scrolled away (a class toggle is cheap enough per scroll event)
+    const update = () => btn.classList.toggle("is-shown", scrollY > 260);
+    addEventListener("scroll", update, { passive: true });
+    update();
+  };
+
+  /* ============================================================
      Boot loader — plain JS, never waits on GSAP
      ============================================================ */
 
@@ -836,6 +873,7 @@
   initMobileNav();
   initTopbar();
   initPageTransitions();
+  initBackButton();
   wireSfx();
 
   const dataReady = loadData();

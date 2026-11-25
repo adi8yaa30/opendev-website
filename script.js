@@ -195,6 +195,7 @@
   const startExperience = async () => {
     if (enterBtn.disabled) return;
     getCtx(); // warm audio inside the user gesture
+    try { localStorage.setItem("od-entered", "1"); } catch (_) {}
 
     introGate.classList.add("is-hidden");
     document.body.classList.add("is-playing-intro");
@@ -485,8 +486,20 @@
 
   wireSfx();
 
-  runLoader().then(() => {
-    enterBtn.disabled = false;
-    enterBtn.classList.add("is-ready");
-  });
+  if (document.documentElement.classList.contains("skip-intro")) {
+    // Returning visitor: no gate, no intro film — straight to the landing loop
+    introGate.classList.add("is-hidden");
+    onVideoEnded();
+    if (location.hash === "#about") {
+      setTimeout(() => {
+        const about = document.getElementById("about");
+        if (about) about.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 150);
+    }
+  } else {
+    runLoader().then(() => {
+      enterBtn.disabled = false;
+      enterBtn.classList.add("is-ready");
+    });
+  }
 })();

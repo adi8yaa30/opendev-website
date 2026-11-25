@@ -52,6 +52,18 @@
       href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
     />
+    <!-- Skip the ENTER gate for returning visitors and anyone arriving from another page of the site -->
+    <script>
+      (function () {
+        try {
+          var r = document.referrer;
+          var internal = r && new URL(r).origin === location.origin;
+          if (localStorage.getItem("od-entered") === "1" || location.hash === "#about" || internal) {
+            document.documentElement.classList.add("skip-intro");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link rel="stylesheet" href="styles.css" />
 
     <!-- Structured data: organization / professional service -->
@@ -271,6 +283,10 @@
         </div>
       </section>
     </main>
+
+    <a href="#home" class="btn-clip btn-ghost back-top fx-target" aria-label="Back to top">
+      <span class="btn-icon">↑</span> BACK TO TOP
+    </a>
 
     <script src="script.js"></script>
   </body>
